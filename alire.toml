@@ -1,0 +1,9 @@
+name = "brackelib"
+description = "Shiny new project"
+version = "0.0.0"
+
+authors = ["Bent Bracke"]
+maintainers = ["Bent Bracke <bent@bracke.dk>"]
+maintainers-logins = ["bracke"]
+[[depends-on]]  # Added by alr
+aunit = "^21.0.0"  # Added by alr
