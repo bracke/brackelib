@@ -33,10 +33,10 @@ package body Brackelib.Stacks is
     return Result;
   end Pop;
 
-  function Size(Self: Stack) return Integer is
-  begin
-    return Natural (Length (Self.Container));
-  end Size;
+   function Size (Self : Stack) return Natural is
+   begin
+      return Natural (Length (Self.Container));
+   end Size;
 
   function Is_Empty(Self: Stack) return Boolean is
   begin
