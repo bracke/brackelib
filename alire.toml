@@ -1,5 +1,5 @@
 name = "brackelib"
-description = "Ada library which contains various utility packages. Currently only a few implementations of abstract data types."
+description = "Ada library which contains various utility packages."
 version = "0.0.1"
 
 authors = ["Bent Bracke"]
