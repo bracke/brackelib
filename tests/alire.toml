@@ -1,0 +1,15 @@
+name = "tests"
+description = "test harness for brackelib"
+version = "0.0.1"
+
+authors = ["Bent Bracke"]
+maintainers = ["Bent Bracke <bent@bracke.dk>"]
+maintainers-logins = ["bracke"]
+
+executables = ["tests"]
+[[depends-on]]  # Added by alr
+aunit = "^21.0.0"  # Added by alr
+[[depends-on]]  # Added by alr
+brackelib = "~0.0.1"  # Added by alr
+[[pins]]  # Added by alr
+brackelib = { path='../../brackelib' }   # Added by alr
