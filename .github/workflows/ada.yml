@@ -1,4 +1,4 @@
-name: Ada (GNAT)
+name: Build
 
 on:
   push:
@@ -8,17 +8,30 @@ on:
 
 jobs:
   build:
+    name: CI on ${{ matrix.os }}
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
 
-    - name: Set up GNAT toolchain
-      run: >
-        sudo apt-get update && 
-        sudo apt-get install gnat gprbuild
-
-    - name: Build
-      run: gprbuild -j0 -p
+    steps:    
+       - name: Checkout
+         uses: actions/checkout@v2
+       - name: ada-actions/toolchain
+         uses: ada-actions/toolchain@ce2021
+         with:
+           distrib: community
+           target: native
+       - name: alire-project/setup-alire
+         uses: alire-project/setup-alire@latest-stable
+       - name: Build
+         run: |
+            alr index --reset-community
+            alr config --global --set toolchain.assistant false
+            alr toolchain --install gnat_native --non-interactive
+            alr toolchain --install gprbuild --non-interactive
+            alr toolchain --select gnat_native --non-interactive
+            alr toolchain --select gprbuild --non-interactive
+            alr build --non-interactive
