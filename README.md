@@ -1,6 +1,6 @@
 # brackelib
+![Build](https://github.com/bracke/brackelib/actions/workflows/ada.yml/badge.svg)
+![Tests](https://github.com/bracke/brackelib/actions/workflows/unit-tests.yml/badge.svg)
+[![Alire](https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/brackelib.json)](https://alire.ada.dev/crates/brackelib.html)
 
 Ada library which contains various utility packages. Currently only a few implementations of abstract data types.
-![Build](https://github.com/bracke/brackelib/actions/workflows/ada.yml/badge.svg)
-![Test suite](https://github.com/bracke/brackelib/actions/workflows/unit-tests.yml/badge.svg)
-[![Alire](https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/brackelib.json)](https://alire.ada.dev/crates/brackelib.html)
