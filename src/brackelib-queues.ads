@@ -5,7 +5,7 @@ generic
   type T is private;
 package Brackelib.Queues is
 --  @summary
---  Implementation of the queue abstract data type
+--  Simplistic implementation of the queue abstract data type
 
    type Queue is limited private;
 
