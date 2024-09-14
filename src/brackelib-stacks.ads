@@ -5,7 +5,7 @@ generic
   type T is private;
 package Brackelib.Stacks is
 --  @summary
---  Implementation of the stack abstract data type
+--  Simplistic implementation of the stack abstract data type
 
    type Stack is limited private;
 
