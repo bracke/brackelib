@@ -2,12 +2,16 @@ name = "brackelib"
 description = "Library which contains various utility packages."
 long-description = """
 # BrackeLib
-Ada library which contains various utility packages. Mainly related to console and file and string operations.
+Ada library which contains various utility packages. Mainly related to console, file and string operations.
+It also contains a simple template system.
 
 - Console
    - Ask: Ask the user a Yes/No question and get the answer as a Boolean.
    - Ask: Ask the user a question and gets the answer as a String.
    - Run: Run a Command with Arguments and returns the status as an Integer.
+   - Message: Write message to stream with linefeed before and after.
+   - Error_Message: Write message in red color to stream with linefeed before and after.
+   - Success_Message: Write success message to stream with linefeed after.
 - Files
    - Copy_Files: Copy all files at the Source which fullfill the Pattern to Target.
    - Move_Files: Moves all files at the Source which fullfill the Pattern to Target.
@@ -18,14 +22,30 @@ Ada library which contains various utility packages. Mainly related to console a
    - Write_Text: Writes the Text to the file pointed to by Filename.
    - Append_Text: Appends the Text to the content of the file pointed to by Filename.
    - Create_Textfile: Creates a new file with the name or path Filename and Text as content.
+   - Replace: Replace all occurences of a pattern in a string.
+   - Fancy_Uppercase: Uppercase first character and first character after every dot.
+- Templates
+   - Fill_In: Replace placeholders with matching values.
+   - Write_Template: Create content by filling in values into template and write the content to file.
+- Datetime
+   - Now_ISO: Returns the current datetime in ISO format
 """
 version = "1.0.0"
 licenses = "CC0-1.0"
 website = "https://github.com/bracke/brackelib"
-tags = ["utility", "adt","stack", "queue","console","files","strings"]
+tags = ["utility", "adt","stack", "queue","console","files","strings","templates","intl","languages","locales"]
 authors = ["Bent Bracke"]
 maintainers = ["Bent Bracke <bent@bracke.dk>"]
 maintainers-logins = ["bracke"]
 
 [[depends-on]] # Avoid bug in GNAT 13
 gnat = "<13.0 | >=13.3"
+
+[[depends-on]]
+clic = "~0.3.0"
+
+[[depends-on]]
+vss = "^25.0.0"
+
+[[depends-on]]
+gnatcoll = "^25.0.0"

@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- v1.0 Console
-- v1.0 Files
-- v1.0 Strings
+- Console
+- Files
+- Strings
+
+### Removed
+
+- ADT Stacks
+- ADT Queues
