@@ -15,7 +15,10 @@ project Brackelib is
    for Library_Kind use Kind;
 
    package Compiler is
-      for Default_Switches ("Ada") use Brackelib_Config.Ada_Compiler_Switches;
+      --  The generated config carries the workspace style and warning switches;
+      --  -gnatyM120 widens the line limit from the -gnatym default of 79.
+      for Default_Switches ("Ada") use
+        Brackelib_Config.Ada_Compiler_Switches & ("-gnatyM120");
    end Compiler;
 
    package Binder is
