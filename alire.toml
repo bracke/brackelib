@@ -42,6 +42,9 @@ maintainers-logins = ["bracke"]
 gnat = "<13.0 | >=13.3"
 
 [[depends-on]]
+gnat_native = "<13.0 | >=13.3"
+
+[[depends-on]]
 clic = "~0.3.0"
 
 [[depends-on]]
@@ -49,3 +52,6 @@ vss = "^25.0.0"
 
 [[depends-on]]
 gnatcoll = "^25.0.0"
+
+[build-profiles]
+"*" = "development"

@@ -2,4 +2,11 @@ obj/
 lib/
 alire/
 config/
-tests/
+#  Not "tests/": that ignored the whole suite, so tests/src/*_tests.* and
+#  utilities_suite.* were never tracked and CI never compiled them.
+#  tests/.gitignore already excludes that tree's obj/, bin/, lib/, alire/, config/.
+
+#  GNATdoc HTML output (published to the gh-pages branch by
+#  .github/workflows/generate_api_doc.yml, not tracked on main).
+html/
+docs/
